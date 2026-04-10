@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Оставить отзыв</title>
+    <style>.error { color: red; }</style>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<h1>Оставить отзыв</h1>
+<form action="#" th:action="@{/forms/feedback}" th:object="${feedbackForm}" method="post">
+    <div>
+        <label>Ваше имя:</label>
+        <input type="text" th:field="*{name}"/>
+        <div class="error" th:errors="*{name}"></div>
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="text" th:field="*{email}"/>
+        <div class="error" th:errors="*{email}"></div>
+    </div>
+    <div>
+        <label>Оценка (1-5):</label>
+        <input type="number" th:field="*{rating}" min="1" max="5"/>
+        <div class="error" th:errors="*{rating}"></div>
+    </div>
+    <div>
+        <label>Комментарий:</label>
+        <textarea th:field="*{comment}" rows="4" cols="50"></textarea>
+        <div class="error" th:errors="*{comment}"></div>
+    </div>
+    <button type="submit">Отправить отзыв</button>
+</form>
+<br/>
+<a th:href="@{/}">На главную</a>
+</body>
+</html>
