@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">Магазин</title>
+</head>
+<body>
+<h1 th:text="${title}">Магазин молочной продукции</h1>
+<p th:text="${welcomeMessage}"></p>
+
+<h2>Популярные товары:</h2>
+<ul>
+    <li th:each="product : ${products}" th:text="${product}"></li>
+</ul>
+
+<h2>Действия:</h2>
+<ul>
+    <li><a th:href="@{/forms/order}">Оформить заказ</a></li>
+    <li><a th:href="@{/forms/feedback}">Оставить отзыв</a></li>
+    <li><a th:href="@{/about}">О магазине</a></li>
+</ul>
+</body>
+</html>

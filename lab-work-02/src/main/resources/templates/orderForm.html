@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Оформление заказа</title>
+    <style>.error { color: red; }</style>
+</head>
+<body>
+<h1>Оформление заказа</h1>
+<form action="#" th:action="@{/forms/order}" th:object="${orderForm}" method="post">
+    <div>
+        <label>Имя:</label>
+        <input type="text" th:field="*{customerName}"/>
+        <div class="error" th:errors="*{customerName}"></div>
+    </div>
+    <div>
+        <label>Телефон (только цифры):</label>
+        <input type="text" th:field="*{phone}"/>
+        <div class="error" th:errors="*{phone}"></div>
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="text" th:field="*{email}"/>
+        <div class="error" th:errors="*{email}"></div>
+    </div>
+    <div>
+        <label>Продукт:</label>
+        <select th:field="*{product}">
+            <option value="">Выберите</option>
+            <option value="Молоко 3,2%">Молоко 3,2%</option>
+            <option value="Сыр Гауда">Сыр Гауда</option>
+            <option value="Йогурт клубничный">Йогурт клубничный</option>
+            <option value="Творог 5%">Творог 5%</option>
+        </select>
+        <div class="error" th:errors="*{product}"></div>
+    </div>
+    <div>
+        <label>Количество:</label>
+        <input type="text" th:field="*{quantity}"/>
+        <div class="error" th:errors="*{quantity}"></div>
+    </div>
+    <button type="submit">Отправить заказ</button>
+</form>
+<br/>
+<a th:href="@{/}">На главную</a>
+</body>
+</html>
