@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: dairy-store-lab-01
+
+  thymeleaf:
+    cache: false
+
+server:
+  port: 8081
