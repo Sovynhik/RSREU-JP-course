@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: lab-work-02
+  thymeleaf:
+    cache: false
+server:
+  port: 8082
