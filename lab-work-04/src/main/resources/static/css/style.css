@@ -1,0 +1,109 @@
+/* Только самое нужное */
+
+body {
+    font-family: 'Courier New', monospace;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 0 20px;
+    background: #fefefe;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: normal;
+    border-left: 4px solid #ccc;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Ссылки как обычные ссылки, не кнопки */
+a {
+    color: #0366d6;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+/* Список товаров - просто точки */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+/* Формы - всё в столбик, минимум стилей */
+form {
+    margin: 20px 0;
+}
+
+input, select, textarea {
+    display: block;
+    width: 100%;
+    padding: 6px 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    background: white;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #666;
+    background: #fffff0;
+}
+
+label {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+button {
+    background: #e0e0e0;
+    border: 1px solid #999;
+    padding: 6px 15px;
+    font-family: monospace;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button:hover {
+    background: #ccc;
+}
+
+/* Ошибки - просто красный текст, без фона */
+.error {
+    color: #c00;
+    font-size: 13px;
+    margin: -10px 0 10px 0;
+}
+
+/* Сообщение об успехе */
+.success {
+    background: #efe;
+    padding: 8px 12px;
+    margin: 15px 0;
+    border-left: 3px solid #6c6;
+}
+
+/* Разделители */
+hr {
+    margin: 30px 0;
+    border: none;
+    border-top: 1px dotted #ccc;
+}
