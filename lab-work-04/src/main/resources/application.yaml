@@ -1,3 +1,14 @@
 spring:
   application:
     name: lab-work-04
+  thymeleaf:
+    cache: false
+  mongodb:
+    host: localhost
+    port: 27017
+    database: dairystore
+    username: dairy_user
+    password: dairy_pass
+    authentication-database: admin
+server:
+  port: 8084
